@@ -52,18 +52,45 @@
               </div>
             </div>
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingFour">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                    nyaa~
-                  </button>
-                </h2>
-                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#mainAccordion">
-                  <div class="accordion-body font-monospace">
-                    >=^._.^= ∫ （＾・ω・＾❁）🙀
-                  </div>
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  I think you've been kidnapped, but I'm unsure. If I receive a phone call from you, how can I verify if you're speaking under duress?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#mainAccordion">
+                <div class="accordion-body">
+                  Any of these statements made by me likely imply that I am speaking to you under duress;
+                  <ul>
+                    <li>I would like an egg in my Ramen</li>
+                    <li>I would prefer a widescreen display for my computer over a taller one</li>
+                    <li>Can I add pearls to my bubble tea?</li>
+                    <li>Could I get regular (100%) sugar in my milk tea?</li>
+                    <li>Oh the payment terminal wants to convert the currency for me? Sure!</li>
+                    <li>Can I borrow a <span id="cableFirst">microUSB</span> cable for my device?</li>
+                    <li>There's no need to fix this cracked phone screen</li>
+                    <li>I've only had my phone for 6 months, I don't need a new one!</li>
+                    <li>Why would I buy that? The only difference between that and the one I already have is that it adds USB-C!</li>
+                    <li>Let me put on my <i>over-ear</i> headphones</li>
+                    <li>Let me book my travel through an Online Travel Agent website</li>
+                    <li>This flight is too short for Business Class to be worth it, let's just fly Economy</li>
+                    <li>I'll take the aisle seat</li>
+                  </ul>              
                 </div>
               </div>
             </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                  nyaa~
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#mainAccordion">
+                <div class="accordion-body font-monospace">
+                  >=^._.^= ∫ （＾・ω・＾❁）🙀
+                </div>
+              </div>
+            </div>
+          </div>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
                 <a href="https://twitter.com/multithreddy" type="button" class="btn btn-light"><i class="bi bi-twitter"></i> @multithreddy</a>
                 <a href="https://www.linkedin.com/in/encryptededdy/" type="button" class="btn btn-light"><i class="bi bi-linkedin"></i> Edward Zhang</a>
@@ -71,5 +98,20 @@
             </div>
         </div>
     </div>
+    <script>
+      var connectorTypes = ['microUSB', 'Lightning', 'Mini USB', '30-pin', 'microDVI', 'non-spec compliant USB-C', "microUSB 3.0", 'magnetic USB-C', 'MagSafe (iPhone)', "USB-A to USB-A", "Gardena to HDMI"];
+      textSequence(0);
+      function textSequence(i) {
+          if (connectorTypes.length > i) {
+              setTimeout(function() {
+                  document.getElementById("cableFirst").innerHTML = connectorTypes[i];
+                  textSequence(++i);
+              }, 1500); // 1.5secs
+          } else if (connectorTypes.length == i) { // Loop
+              textSequence(0);
+          }
+      }
+  </script>
+
 </body>
 </html>
